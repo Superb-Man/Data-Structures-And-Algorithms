@@ -45,7 +45,7 @@ class FibHeap{
 
 public :
 	FibHnode<T>* min ;
-    int n ;
+        int n ;
 	FibHeap() {
 		min = NULL ;
 		n = 0 ;
@@ -310,13 +310,13 @@ template<typename T>
 void FibHeap<T> :: clearAll(FibHnode<T>* node) {
 	if (node) {
 		FibHnode<T>* temp = node ;
-        FibHnode<T>* temp2 = temp ;
+        	FibHnode<T>* temp2 = temp ;
 		temp = temp->right ;
 		clearAll(temp2->child) ;
 		delete temp2 ;
 		while(temp != node) {
-            FibHnode<T>* temp = node ;
-            FibHnode<T>* temp2 = temp ;
+            	    FibHnode<T>* temp = node ;
+            	    FibHnode<T>* temp2 = temp ;
 		    temp = temp->right ;
 		    clearAll(temp2->child) ;
 		    delete temp2 ;
